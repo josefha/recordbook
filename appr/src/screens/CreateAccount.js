@@ -36,6 +36,7 @@ const CreateAccount = props => {
   const [emailTextValue, setEmailTextValue] = useState("");
   const [passwordTextValue, setPasswordTextValue] = useState("");
   const [passwordRepeatTextValue, setPasswordRepeatTextValue] = useState("");
+
   return (
     <Fragment>
       <SafeAreaView style={{ backgroundColor: "#f2f2f2" }} />

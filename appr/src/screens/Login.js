@@ -50,7 +50,7 @@ const Login = props => {
           secureTextEntry
         />
         <Divider />
-        <View styleName="horizontal">
+        <View style={styles.box}>
           <Button
             styleName="confirmation secondary"
             onPress={() => callServer(props, emailTextValue, passwordTextValue)}
@@ -63,6 +63,18 @@ const Login = props => {
           >
             <Text>Create Account</Text>
           </Button>
+          <Button
+            styleName="confirmation secondary"
+            onPress={() => props.navigation.navigate("Onboarding")}
+          >
+            <Text>Onboarding</Text>
+          </Button>
+          <Button
+            styleName="confirmation secondary"
+            onPress={() => props.navigation.navigate("Home")}
+          >
+            <Text>Enter</Text>
+          </Button>
         </View>
       </Screen>
     </Fragment>
@@ -70,6 +82,10 @@ const Login = props => {
 };
 
 const styles = StyleSheet.create({
+  box: {
+    height: 200,
+    width: "100%"
+  },
   Heading: {
     paddingTop: "5%",
     paddingLeft: "5%"

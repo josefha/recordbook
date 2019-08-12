@@ -23,38 +23,25 @@ const doSomething = async () => {
   console.log("TCL: doSomething -> value", value);
 };
 
-const Home = props => {
-  return (
-    <Fragment>
-      <SafeAreaView style={{ backgroundColor: "#f2f2f2" }} />
-      {/* <NavigationBar centerComponent={<Title>Text</Title>} /> */}
-      <Screen style={styles.Box}>
-        <Divider />
-        <Heading style={styles.Heading}>You are logged in</Heading>
-        <Divider />
-        <View styleName="horizontal">
-          <Button
-            styleName="confirmation"
-            onPress={() => {
-              doSomething(props);
-            }}
-          >
-            <Text>Do something</Text>
-          </Button>
-
-          <Button
-            styleName="confirmation secondary"
-            onPress={() => {
-              logout(props);
-            }}
-          >
-            <Text>Logout</Text>
-          </Button>
-        </View>
-      </Screen>
-    </Fragment>
-  );
-};
+class Home extends React.Component {
+  static navigationOptions = {
+    title: "Records"
+  };
+  render() {
+    return (
+      <Fragment>
+        <SafeAreaView style={{ backgroundColor: "#f2f2f2" }} />
+        {/* <NavigationBar centerComponent={<Title>Text</Title>} /> */}
+        <Screen style={styles.Box}>
+          <Divider />
+          <Heading style={styles.Heading}>Josefs RecordBook</Heading>
+          <Divider />
+          <View styleName="horizontal" />
+        </Screen>
+      </Fragment>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   SafeArea: { backgroundColor: "#000" },

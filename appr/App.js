@@ -14,8 +14,13 @@ import AppNavigator from "./src/navigation/AppNavigator";
 
 const AppContainer = createAppContainer(AppNavigator);
 
-const App = () => {
-  return <AppContainer />;
-};
+import { mapping, light as lightTheme } from "@eva-design/eva";
+import { ApplicationProvider, Layout } from "react-native-ui-kitten";
+
+const App = () => (
+  <ApplicationProvider mapping={mapping} theme={lightTheme}>
+    <AppContainer />
+  </ApplicationProvider>
+);
 
 export default App;
